@@ -2,12 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faJs, faBootstrap, faReact, faJava } from '@fortawesome/free-brands-svg-icons';
 
-const iconHTML = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faHtml5} />;
-const iconCSS = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faCss3} />;
-const iconFJS = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faJs} />;
-const iconBS = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faBootstrap} />
-const iconReact = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faReact} />
-const iconJava = <FontAwesomeIcon className="text-4xl sm:text-6xl text-gray-800 mx-2 md:mx-5 animate-pulse" icon={faJava} />
+const iconHTML = <FontAwesomeIcon className="dev-icons" icon={faHtml5} />;
+const iconCSS = <FontAwesomeIcon className="dev-icons" icon={faCss3} />;
+const iconFJS = <FontAwesomeIcon className="dev-icons" icon={faJs} />;
+const iconBS = <FontAwesomeIcon className="dev-icons" icon={faBootstrap} />;
+const iconReact = <FontAwesomeIcon className="dev-icons" icon={faReact} />;
+const iconJava = <FontAwesomeIcon className="dev-icons" icon={faJava} />;
 
 export default function Welcome() {
     return (

@@ -6,4 +6,20 @@
   @apply font-semibold py-2 px-4 rounded;
 }
 
+.dev-icons {
+  @apply text-4xl text-gray-800 mx-2 animate-pulse;
+}
+
+@screen sm {
+  .dev-icons {
+    @apply text-6xl;
+  }
+}
+
+@screen md {
+  .dev-icons {
+    @apply mx-5;
+  }
+}
+
 @tailwind utilities;
