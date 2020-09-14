@@ -28,7 +28,11 @@ export default function Projects() {
     }
 
     function handleNextButton() {
-        setCount(prevCount => prevCount + 1 > 3 ? 0 :prevCount + 1);
+        setCount(prevCount =>  prevCount + 1 > 3 ? 0 : prevCount + 1);
+    }
+
+    function handleOnClick(e) {
+        setCount(parseInt(e.target.value));
     }
     
     return (
@@ -49,22 +53,22 @@ export default function Projects() {
                                 </button>
                             </li>
                             <li>
-                                <button  onClick={() => setCount(0)} className="project-btn">
+                                <button  onClick={ handleOnClick } className="project-btn" value="0">
                                     1
                                 </button>
                             </li>
                             <li>
-                                <button  onClick={() => setCount(1)} className="project-btn">
+                                <button  onClick={ handleOnClick } className="project-btn" value="1">
                                     2
                                 </button>
                             </li>
                             <li>
-                                <button  onClick={() => setCount(2)} className="project-btn">
+                                <button  onClick={ handleOnClick } className="project-btn" value="2">
                                     3
                                 </button>
                             </li>
                             <li>
-                                <button  onClick={() => setCount(3)} className="project-btn">
+                                <button  onClick={ handleOnClick } className="project-btn" value="3">
                                     4
                                 </button>
                             </li>
