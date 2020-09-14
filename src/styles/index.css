@@ -1,11 +1,11 @@
 @tailwind base;
 
 @tailwind components;
-
+/* Estilo de los enlaces de los íconos de los perfiles */
 .a-link {
   @apply font-semibold py-2 px-4 rounded;
 }
-
+/* Estilo de los íconos de la sección welcome */
 .dev-icons {
   @apply text-4xl text-gray-800 mx-2 animate-pulse;
 }
@@ -19,6 +19,30 @@
 @screen md {
   .dev-icons {
     @apply mx-5;
+  }
+}
+
+
+/* Estilos de la sección contact */
+.contact-section {
+  @apply text-center text-xl text-gray-800;
+}
+
+@screen sm {
+  .contact-section {
+    @apply text-2xl;
+  }
+}
+
+@screen md {
+  .contact-section {
+    @apply text-5xl;
+  }
+}
+
+@screen lg {
+  .contact-section {
+    @apply text-6xl;
   }
 }
 

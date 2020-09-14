@@ -1,7 +1,11 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors : {
+        'blue-dago': '#013050',
+      }
+    }
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
