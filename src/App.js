@@ -1,29 +1,41 @@
 import React from 'react';
-// import SurveyForm from './images/SurveyForm.png';
-// import LandingPage from './images/LandingPage.png';
-// import TributePage from './images/TributePage.png';
-// import TecnicalDocumentation from './images/TecnicalDocumentation.png';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Footer from './components/footer/Footer';
 import NavBar from './components/header/NavBar';
 import Projects from './components/main/Projects';
 import Welcome from './components/main/Welcome';
 import Contact from './components/main/Contact';
 
-// const cardData = [
-//   { image: SurveyForm, tittle: "Survey Form", endPoint: 'https://dago-ramirez.github.io/Survey-Form/' },
-//   { image: LandingPage, tittle: "Landing Page", endPoint: 'https://dago-ramirez.github.io/Landing-Page/' },
-//   { image: TributePage, tittle: "Tribute Page", endPoint: 'https://dago-ramirez.github.io/Tribute_Page/' },
-//   { image: TecnicalDocumentation, tittle: "Tecnical Documentation", endPoint: 'https://dago-ramirez.github.io/Tecnical_Documentation_Page/' }
-// ];
+const links = [
+  { 'link': <Link to="/">Welcome</Link> },
+  { 'link': <Link to="/projects">Projects</Link> },
+  { 'link': <Link to="/contact">Contact</Link> }
+]
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Welcome />
-      <Projects />
-      <Contact />
-      <Footer />      
+      <Router>
+        <NavBar links={links} />
+        <Switch >
+          <Route exact path="/">
+            <Welcome />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </Router>     
+      <Footer />
     </div>
   );
 }
