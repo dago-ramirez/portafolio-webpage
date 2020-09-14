@@ -7,7 +7,7 @@
 }
 /* Estilo de los íconos de la sección welcome */
 .dev-icons {
-  @apply text-4xl text-gray-800 mx-2 animate-pulse;
+  @apply text-4xl text-teal-900 mx-2 animate-pulse;
 }
 
 @screen sm {
@@ -22,10 +22,9 @@
   }
 }
 
-
 /* Estilos de la sección contact */
 .contact-section {
-  @apply text-center text-xl text-gray-800;
+  @apply text-center text-xl text-teal-900;
 }
 
 @screen sm {
@@ -45,5 +44,16 @@
     @apply text-6xl;
   }
 }
+
+/* Estilos de los botones de la sección projects */
+
+.project-btn {
+  @apply text-xs font-bold flex w-8 h-8 mx-1 p-0 items-center justify-center leading-tight relative border border-solid border-teal-900 bg-gray-300 text-teal-900;
+}
+
+.project-btn:hover {
+  @apply  bg-gray-500;
+}
+
 
 @tailwind utilities;
