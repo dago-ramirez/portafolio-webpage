@@ -17,11 +17,22 @@ const cardData = [
     { image: TecnicalDocumentation, tittle: "Tecnical Documentation", endPoint: 'https://dago-ramirez.github.io/Tecnical_Documentation_Page/' }
 ];
 
+const numbers = [1, 2, 3, 4];
+
 export default function Projects() {
     const [count, setCount] = useState(0);
     const card = cardData.map((data, i) => {
         return <a href={data.endPoint} target="_blank" rel="noopener noreferrer" key={i}><ProjectCard data={data} /></a>;
     });    
+
+    const btn = numbers.map(number => {
+        return (<li>
+                    <button  onClick={ handleOnClick } className="project-btn" key={number} value={number - 1}>
+                        {number}
+                    </button>
+                </li>
+        )
+    });
 
     function handlePrevButton() {
         setCount(prevCount => prevCount - 1 < 0 ? 3 : prevCount - 1);
@@ -52,26 +63,7 @@ export default function Projects() {
                                     {iconPrev}
                                 </button>
                             </li>
-                            <li>
-                                <button  onClick={ handleOnClick } className="project-btn" value="0">
-                                    1
-                                </button>
-                            </li>
-                            <li>
-                                <button  onClick={ handleOnClick } className="project-btn" value="1">
-                                    2
-                                </button>
-                            </li>
-                            <li>
-                                <button  onClick={ handleOnClick } className="project-btn" value="2">
-                                    3
-                                </button>
-                            </li>
-                            <li>
-                                <button  onClick={ handleOnClick } className="project-btn" value="3">
-                                    4
-                                </button>
-                            </li>
+                              {btn}
                             <li>
                                 <button  onClick={ handleNextButton } className="project-btn">
                                     {iconNext}

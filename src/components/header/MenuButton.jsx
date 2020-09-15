@@ -1,11 +1,6 @@
 import React from 'react'
 
 export default function MenuButton() {
-    function handleOnClick() {        
-        const linksNavBar = document.querySelector('.links-navbar').classList;
-        linksNavBar.contains('hidden') ? linksNavBar.remove('hidden') : linksNavBar.add('hidden');     
-    }
-
     return (
         <div className="block lg:hidden md:hidden">
             <button onClick={handleOnClick} className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -13,4 +8,9 @@ export default function MenuButton() {
             </button>
         </div>
     )
+}
+
+export function handleOnClick() {
+    const linksNavBar = document.querySelector('.links-navbar').classList;
+    linksNavBar.contains('hidden') ? linksNavBar.remove('hidden') : linksNavBar.add('hidden');
 }
