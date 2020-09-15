@@ -26,8 +26,8 @@ export default function Projects() {
     });    
 
     const btn = numbers.map(number => {
-        return (<li>
-                    <button  onClick={ handleOnClick } className="project-btn" key={number} value={number - 1}>
+        return (<li key={number}>
+                    <button  onClick={ handleOnClick } className="project-btn" value={number - 1}>
                         {number}
                     </button>
                 </li>
@@ -48,10 +48,10 @@ export default function Projects() {
     
     return (
         <>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center my-auto">
                 <h6 className="text-2xl sm:text-4xl text-teal-900 font-bold text-center">These are some of my projects</h6>
                 <div className="grid grid-cols-12 gap-4">
-                    <div className="col-span-12 md:col-start-5 md:col-span-4">
+                    <div className="col-span-12 md:col-start-3 md:col-span-8 lg:col-start-5 lg:col-span-4">
                         {card[count]}
                     </div>
                 </div>

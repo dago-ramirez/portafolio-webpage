@@ -20,7 +20,7 @@ const links = [
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col h-screen justify-between">
       <Router>
         <NavBar links={links} />
         <Switch >

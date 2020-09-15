@@ -41,7 +41,7 @@
 
 @screen lg {
   .contact-section {
-    @apply text-6xl;
+    @apply text-5xl;
   }
 }
 
